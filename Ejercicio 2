@@ -1,0 +1,14 @@
+from abc import ABC, abstractmethod
+
+class Pago(ABC):
+    @abstractmethod
+    def procesar_pago(self):
+        pass
+    
+class Paypal(Pago):
+    def procesar_pago(self):
+        return "Pago procesado con exito"
+
+class TarjetaCredito(Pago):
+    def procesar_pago(self):
+        return "Pago procesado con exito"
